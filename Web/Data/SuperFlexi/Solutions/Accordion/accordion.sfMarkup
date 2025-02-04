@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definitions>
+	<MarkupDefinition
+		name="Accordion"
+		moduleClass="accordion-module"
+		editPageClass="accordion-edit"
+		fieldDefinitionSrc="accordion.sfFields"
+		fieldDefinitionGuid="1d2e642f-2ddd-43e4-957c-507f3b77252d"
+		editPageTitle="Item Details"
+		editPageDeleteButtonText="Delete Item"
+		useHeader="false"
+		useFooter="false"
+		hideOuterWrapperPanel="false"
+		hideInnerWrapperPanel="false"
+		hideOuterBodyPanel="false"
+		hideInnerBodyPanel="false"
+		viewName="accordion.cshtml"
+	>
+
+	</MarkupDefinition>
+
+    <SearchDefinition>
+        <Title>$title$</Title>
+        <Keywords></Keywords>
+        <Description>$content$</Description>
+        <Link>$_PageUrl_$</Link>
+    </SearchDefinition>
+    
+</Definitions>

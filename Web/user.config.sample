@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<appSettings>
+	<!-- 
+		IMPORTANT:
+		Note that changes made to this file are not automatically detected by the ASP.NET runtime
+		It does detect changes to Web.config, so when you make a change in this file you need to 
+		touch Web.config (ie type a space in it and save it) to make it reload settings
+	-->
+
+
+	<!--
+		Database Settings:
+		Set the values for the database platform you are using.
+		You can delete the others.
+	-->
+	<add key="MSSQLConnectionString" value="server=localhost;database=mojoportal;UID=mojoportal-user;PWD=password123;" />
+	<add key="MySqlConnectionString" value="Server=localhost;Database=mojoportal;Uid=mojoportal-user;Pwd=password123;Charset=utf8;" />
+	<add key="PostgreSQLConnectionString" value="Server=localhost;Port=5432;Database=mojoportal;User Id=mojoportal-user;Password=password123;Encoding=UNICODE;" />
+
+
+	<!--
+		SQLite:
+		you can use a fully qualified file path as shown below or if you are using the default
+		db at /Data/sqlitedb/mojoportal.db just leave this set to "defaultdblocation"
+	-->
+	<!-- <add key="SqliteConnectionString" value="version=3,URI=file:C:\Projects\mojoportal\Web\Data\sqlitedb\mojoportal.db" /> -->
+	<add key="SqliteConnectionString" value="defaultdblocation" />
+
+
+	<!--
+		Setup Settings:
+		This enables the setup page to try to change the default known machinekey in Web.config
+		to a new custom one for best security. Once you have a custom machine key you could safely
+		remove this setting.
+	-->
+	<add key="TryEnsureCustomMachineKeyOnSetup" value="true" />
+
+
+	<!--
+		DisableSetup:
+		Change this to true after installation
+	-->
+	<add key="DisableSetup" value="false"/>
+
+
+	<!--
+		Security Settings:
+		
+		CheckMD5PasswordHashAsFallback (true)
+			This is true by default so that upgraded sites can change
+			automatically from the older md5 hashing to the newer sha512 with salt. It is false here
+			because it is not needed to do this extra check for new installations after we changed the
+			hashing since user.config.sample is only used when creating new sites and it is then
+			renamed to user.config.
+		
+		SSLIsAvailable (false)
+			is a global setting that means all sites in the installation can use SSL
+			if you want to enable SSL in only specific sites use
+			<add key="Site1-SSLIsAvailable" value="true" />
+			where the numeric part corresponds to the SiteID
+		
+		-->
+	<add key="CheckMD5PasswordHashAsFallback" value="false" />
+
+	<add key="UseLegacyCryptoHelper" value="false" />
+	<add key="SSLIsAvailable" value="false" />
+
+	<!-- Administration Settings -->
+	<add key="ImageGalleryUseMediaFolder" value="true" />
+	<add key="SiteLogoUseMediaFolder" value="true" />
+	<add key="HtmlFragmentUseMediaFolder" value="true" />
+	<add key="XMLUseMediaFolder" value="true" />
+
+
+	<!-- Site Search Settings -->  
+	<add key="DisableSearchFeatureFilters" value="false" />
+	<add key="EnableSearchResultsHighlighting" value="true" />
+	<add key="Forum:AggregateSearchIndexPerThread" value="true" />
+
+	<!-- 
+		Logging 404 Errors:
+		It is good to log 404 errors (page not found) but only when you will be actively reviewing the logs to identify bad links.
+		It's best to use analytics to do this though. We disable 404 logging by default on new sites.
+	-->
+	<add key="Log404Errors" value="false"/>
+
+	<!--
+		Email Settings:
+		Setting this to false will hide SMTP settings under Site Settings in the admin menu.
+		When this is enabled, you can configure different SMTP settings for each of your sites.
+		If all sites share one SMTP server, set this to false and override the SMTP settings below
+		in your user.config file.
+
+		As of version 2.6, this setting is true by default in code and in the sample user.config file.
+	-->
+	<add key="EnableSiteSettingsSmtpSettings" value="true" />
+	<add key="SMTPServer" value=""/>
+	<add key="SMTPRequiresAuthentication" value="true"/>
+	<add key="SMTPUseSsl" value="true" />
+	<add key="SMTPUser" value=""/>
+	<add key="SMTPPassword" value=""/>
+
+
+	<!--
+		Skin Settings:
+		These should only be set to false if needed while creating a skin.
+	-->
+	<!-- <add key="CacheCssOnServer" value="true"/>
+	<add key="CacheCssInBrowser" value="true"/>	
+	<add key="CombineCSS" value="true"/> -->
+	
+	<!-- Showing the mojoPortal version could be a security risk IF a bug is found in a specific version -->
+	<add key="IncludeVersionInCssUrl" value="false" />
+	
+	<!-- Cache Settings -->
+	<!-- <add key="DisableCacheFor301Redirects" value="false" />
+	<add key="SetExplicitCacheFor301Redirects" value="true" />
+	<add key="CacheDurationInDaysFor301Redirects" value="5" /> -->
+	
+	
+</appSettings>

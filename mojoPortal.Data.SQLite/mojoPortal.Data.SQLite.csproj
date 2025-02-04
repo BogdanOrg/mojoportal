@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C224A35B-AB21-4476-A411-CA5BA406598B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>mojoPortal.Data</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>mojoPortal.Data</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug - SQLite|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <WarningLevel>1</WarningLevel>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release - SQLite|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <WarningLevel>1</WarningLevel>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="DBAuthorizeNetLog.cs" />
+    <Compile Include="dbBannedIP.cs" />
+    <Compile Include="DBCategory.cs" />
+    <Compile Include="DBCategoryItem.cs" />
+    <Compile Include="DBComment.cs" />
+    <Compile Include="DBCommerceReport.cs" />
+    <Compile Include="DBContentHistory.cs" />
+    <Compile Include="DBContentMeta.cs" />
+    <Compile Include="DBContentMetaLink.cs" />
+    <Compile Include="DBContentRating.cs" />
+    <Compile Include="DBContentStyle.cs" />
+    <Compile Include="DBContentTemplate.cs" />
+    <Compile Include="DBContentWorkflow.cs" />
+    <Compile Include="DBCurrency.cs" />
+    <Compile Include="DBEmailSendLog.cs" />
+    <Compile Include="DBEmailSendQueue.cs" />
+    <Compile Include="DBEmailTemplate.cs" />
+    <Compile Include="DBFileAttachment.cs" />
+    <Compile Include="dbFriendlyUrl.cs" />
+    <Compile Include="DBGeoCountry.cs" />
+    <Compile Include="DBGeoZone.cs" />
+    <Compile Include="DBGoogleCheckoutLog.cs" />
+    <Compile Include="dbHtmlContent.cs" />
+    <Compile Include="DBIndexingQueue.cs" />
+    <Compile Include="DBLanguage.cs" />
+    <Compile Include="DBLetter.cs" />
+    <Compile Include="DBLetterHtmlTemplate.cs" />
+    <Compile Include="DBLetterInfo.cs" />
+    <Compile Include="DBLetterSendLog.cs" />
+    <Compile Include="DBLetterSubscription.cs" />
+    <Compile Include="dbModule.cs" />
+    <Compile Include="dbModuleDefinition.cs" />
+    <Compile Include="dbModuleSettings.cs" />
+    <Compile Include="dbPageSettings.cs" />
+    <Compile Include="DBPaymentLog.cs" />
+    <Compile Include="DBPayPalLog.cs" />
+    <Compile Include="DBPlugNPayLog.cs" />
+    <Compile Include="dbPortal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DBRedirectList.cs" />
+    <Compile Include="dbRoles.cs" />
+    <Compile Include="DBSavedQuery.cs" />
+    <Compile Include="dbSiteFolder.cs" />
+    <Compile Include="dbSitePersonalization.cs" />
+    <Compile Include="dbSiteSettings.cs" />
+    <Compile Include="DBSiteSettingsEx.cs" />
+    <Compile Include="dbSiteUser.cs" />
+    <Compile Include="DBSystemLog.cs" />
+    <Compile Include="DBTag.cs" />
+    <Compile Include="DBTagItem.cs" />
+    <Compile Include="DBTagVocabulary.cs" />
+    <Compile Include="DBTaskQueue.cs" />
+    <Compile Include="DBTaxClass.cs" />
+    <Compile Include="DBTaxRate.cs" />
+    <Compile Include="DBUserClaims.cs" />
+    <Compile Include="DBUserLocation.cs" />
+    <Compile Include="DBUserLogins.cs" />
+    <Compile Include="dbUserPage.cs" />
+    <Compile Include="dbWebPartContent.cs" />
+    <Compile Include="Properties\CommonAssemblyInfo.cs" />
+    <Compile Include="SqliteHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net">
+      <Version>2.0.15</Version>
+    </PackageReference>
+    <PackageReference Include="Mono.Data.Sqlite">
+      <Version>1.0.61</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>xcopy /s /y /d "$(SolutionDir)Web\data\sqlitedb\sqlite3.dll" "$(SolutionDir)Web\bin\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- <Target Name="SpicNSpan" BeforeTargets="_GetAllRestoreProjectPathItems">
+    <RemoveDir Directories="$(TargetDir)" />
+    <RemoveDir Directories="$(ProjectDir)$(BaseIntermediateOutputPath)" />
+  </Target> -->
+</Project>

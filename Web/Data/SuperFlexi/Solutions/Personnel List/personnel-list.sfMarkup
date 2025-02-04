@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definitions>
+	<MarkupDefinition
+		name="Personnel List"
+		moduleClass="personnel-list"
+		editPageClass="personnel-list-edit"
+		fieldDefinitionSrc="personnel-list.sfFields"
+		fieldDefinitionGuid="a54fc476-8f84-4e89-9c70-82f4f163e564"
+		editPageTitle="Person Details"
+		editPageDeleteButtonText="Delete Person"
+		useHeader="false"
+		useFooter="false"
+		hideOuterWrapperPanel="false"
+		hideInnerWrapperPanel="false"
+		hideOuterBodyPanel="false"
+		hideInnerBodyPanel="false"
+		viewName="personnel-list.cshtml"
+		debug="false"
+	>
+		<!-- Calls in CSS files unique to this SuperFlexi Solution
+			Attributes:
+			name (required)				: An arbitrary name for your CSS file, ensures that the file is not called twice if the solution is used twice on one page
+			href (required) 			: The path to your CSS file, relative to the solution folder
+			RenderAboveSSC (optional) 	: Determines whether the CSS file is added to the DOM above mojoPortal's Style Sheet Cominer, or below it
+		 -->
+		<Styles>
+			<Style name="personnelListBaseCSS" href="resources/personnel-list-base.css"></Style>
+		</Styles>
+
+		<!-- Calls in Script files unique to this SuperFlexi Solution
+			 Attributes:
+			 name (required)				: An arbitrary name for your script file, ensures that the file is not called twice if the solution is used twice on one page
+			 src (required)					: The path to your script file, relative to the solution folder
+			 position (optional)			: Determines where the file renders, based on the following options...
+				inHead
+				inBody (register script) (default)
+				aboveMarkupDefinition
+				belowMarkupDefinition
+				bottomStartup (register startup script)
+				
+			Note: Setting names to prevent multiple file loads only works for positions of inHead, inBody and bottomStartup.
+		-->
+		<Scripts>
+			<!-- Example
+				<Script position="bottomStartup" name="myScript" src="resources/my-script.js"></Script>
+			-->
+		</Scripts>
+	</MarkupDefinition>
+
+    <SearchDefinition>
+        <Title>$name$</Title>
+        <Keywords>$name$ $position$</Keywords>
+        <Description>$description$</Description>
+        <Link>$_PageUrl_$</Link>
+    </SearchDefinition>
+</Definitions>

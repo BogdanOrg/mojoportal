@@ -1,0 +1,44 @@
+<browsers>
+	<browser refID="Default">
+		<controlAdapters>
+			<adapter controlType="mojoPortal.Web.UI.mojoSiteMapMenu"
+					 adapterType="mojoPortal.Web.SiteMapMenuAdapter" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenu"
+					 adapterType="mojoPortal.Web.MenuAdapter" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenuSuperfish"
+					 adapterType="mojoPortal.Web.MenuAdapterSuperfish" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenuSuperfishVertical"
+					 adapterType="mojoPortal.Web.MenuAdapterSuperfishVertical" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenuWithSpanInLinks"
+					 adapterType="mojoPortal.Web.MenuAdapterWithSpanInLinks" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenuWith3SpansInLinks"
+					 adapterType="mojoPortal.Web.MenuAdapterWith3SpansInLink" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoTreeView"
+					 adapterType="mojoPortal.Web.TreeViewAdapter" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoSiteMapTreeView"
+					 adapterType="mojoPortal.Web.SiteMapTreeViewAdapter" />
+
+			<adapter controlType="mojoPortal.Web.UI.ArtisteerTreeView"
+					 adapterType="mojoPortal.Web.ArtisteerTreeViewAdapter" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenuArtisteer"
+					 adapterType="mojoPortal.Web.MenuAdapterArtisteer" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoMenuArtisteerVertical"
+					 adapterType="mojoPortal.Web.MenuAdapterArtisteerVertical" />
+
+			<adapter controlType="mojoPortal.Web.Controls.mojoGridView"
+					 adapterType="mojoPortal.Web.GridViewAdapter" />
+
+			<adapter controlType="mojoPortal.Web.UI.mojoDataList"
+					 adapterType="CSSFriendly.DataListAdapter" />
+		</controlAdapters>
+	</browser>
+</browsers>

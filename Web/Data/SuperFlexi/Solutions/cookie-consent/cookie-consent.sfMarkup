@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Definitions>
+	<MarkupDefinition
+		name="Cookie Consent"
+		moduleClass="cookie-consent-module"
+		editPageClass="cookie-consent-edit"
+		fieldDefinitionSrc="cookie-consent.sfFields"
+		fieldDefinitionGuid="e462d8ff-18ee-45b9-82ba-c3436f661226"
+		editPageTitle="Cookie Consent Details"
+		editPageDeleteButtonText="Delete Cookie Consent"
+		useHeader="false"
+		useFooter="false"
+		hideOuterWrapperPanel="true"
+		hideInnerWrapperPanel="true"
+		hideOuterBodyPanel="true"
+		hideInnerBodyPanel="true"
+		maxItems="1"
+		showSaveAsNewButton="false"
+		viewName="cookie-consent.cshtml"
+		debug="false"
+	>
+		<Styles>
+			<Style name="cookieConsentBaseCSS" href="css/cookie-consent.css"></Style>
+		</Styles>
+
+		<Scripts>
+			<Script position="aboveMarkupDefinition" name="cookieConsentScript" src="js/cookie-consent.js"></Script>
+		</Scripts>
+	</MarkupDefinition>
+</Definitions>

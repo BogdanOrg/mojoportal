@@ -1,0 +1,165 @@
+/* ----------------------------------
+mojoPortal Admin Menu CSS
+To use this, add this to your style.config file:
+<file cssvpath="/Data/style/adminmenu/style.css" imagebasevpath="/Data/style/adminmenu/">none</file>
+------------------------------------- */
+
+/* Admin menu -- 2.8+ */
+.panelwrapper.adminmenu { 
+    padding: 30px 30px 30px 27px;
+}
+
+.adminmenu ul.simplelist * {
+    box-sizing: border-box;
+}
+
+.adminmenu ul.simplelist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-left: -15px; 
+    margin-right: -15px;
+    padding: 0
+}
+
+.adminmenu ul.simplelist>li {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 calc(100%/7);
+    flex: 0 0 calc(100%/7);
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    min-width: 160px;
+    padding: 15px;
+    text-align: center;
+}
+
+.adminmenu ul.simplelist>li a {
+    border: 1px solid #ddd;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+	text-decoration: none;
+}
+
+.adminmenu ul.simplelist>li a>span.fa {
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.adminmenu ul.simplelist>li a>span.fa.fa-stack {
+    font-size: 20px;
+}
+
+.adminmenu ul.simplelist>li a:hover {
+    background-color: #eee;
+    text-decoration: none;
+}
+
+/* Admin menu -- before 2.8 
+For more information about Crystal Clear icons, http://commons.wikimedia.org/wiki/Category:Crystal_Clear_icons 
+This css and few custom modified verasions of crystal icons were contributed by Steve Railsback of Colorado State U 2010-09-29
+
+*/
+
+
+/*
+div.adminmenu {  }
+div.adminmenu ul.simplelist { margin: 0 0 1em -20px; }
+div.adminmenu ul.simplelist li { float: left; display: block; background-image:none; }
+div.adminmenu ul.simplelist li  a { 
+	line-height: 1em; 
+	display: block; 
+	width: 100px; 
+	height: 40px; 
+	float: left; 
+	padding: 60px 10px 10px 10px; 
+	margin: 5px; 
+	text-decoration: none; 
+	border: 1px solid #ddd; 
+	text-align: center;  
+}
+
+html[dir='rtl'] div.adminmenu ul li { float: right;}
+html[dir='rtl'] div.adminmenu ul li a { float: right; }
+
+
+div.adminmenu ul.simplelist li a:hover { color: #000; border: 1px solid #333; background-color: #eee; } 
+
+a.lnkSiteSettings { background: url('Crystal_Clear_action_run.png') no-repeat center 10px; }
+
+
+a.lnkSecurityAdvisor, a.lnkSecurityAdvisorWarning {background: url('Crystal_Clear_app_agent.png') no-repeat center 10px; }
+
+
+a.lnkSecurityAdvisorWarning { color:Red !important; border-color:Red !important; }
+a.lnkSecurityAdvisorWarning:after { content: " Needs Attention! "; }
+span.secwarning { display: none; }
+
+
+a.lnkCommerceReports { background: url('Crystal_Clear_app_kchart.png') no-repeat center 10px;}
+a.lnkContentManager { background: url('Crystal_Clear_mimetype_document.png') no-repeat center 10px;}
+a.lnkContentWorkFlow { background: url('Crystal-Clear-content_workflow.png') no-repeat center 10px; }
+a.lnkContentTemplates { background: url('Crystal_Clear_app_kivio.png') no-repeat center 10px;}
+a.lnkStyleTemplates { background: url('Crystal-Clear-app-stylesheet.png') no-repeat center 10px;}
+a.lnkSiteList { background: url('folder_html.png') no-repeat center 10px;}
+a.lnkPageTree { background: url('Crystal-Clear-action-view-tree.png') no-repeat  center 10px;}
+a.lnkRoleAdmin { background: url('Crystal_Clear_users.png') no-repeat  center 10px;}
+a.lnkFileManager { background: url('Cystal_Clear_file_manager.png') no-repeat  center 10px;}
+a.lnkAddUser { background: url('Crystal_Clear_add_user.png') no-repeat  center 10px;}
+a.lnkCoreData { background: url('Crystal_Clear_app_database.png') no-repeat  center 10px;}
+a.lnkAdvancedTools { background: url('Crystal-Clear-action-configure.png') no-repeat  center 10px;}
+a.lnkLogViewer { background: url('Crystal-Clear-mimetype-vcalendar.png') no-repeat  center 10px;}
+a.lnkServerInfo { background: url('Crystal-Clear-app-ksysguard.png') no-repeat  center 10px;}
+a.lnkNewsletter { background: url('Crystal-Clear-app-kontact.png') no-repeat  center 10px;}
+a.lnkMemberList { background: url('Crystal-Clear-kuser2.png') no-repeat  center 10px;}
+a.lnkCurrencyAdmin { background: url('Crystal-Clear-currency.png') no-repeat  center 10px;}
+a.lnkCountryAdmin { background: url('Crystal-Clear-app-locale.png') no-repeat  center 10px;}
+a.lnkGeoZone { background: url('Crystal-Clear-app-browser.png') no-repeat  center 10px;}
+a.lnkTaxClassAdmin { background: url('Crystal-Clear-app-kspread.png') no-repeat  center 10px;}
+a.lnkTaxRateAdmin { background: url('Crystal-Clear-tax.png') no-repeat  center 10px;}
+a.lnkUrlManager { background: url('Crystal-Clear-url.png') no-repeat  center 10px;}
+a.lnkRedirectManager { background: url('Crystal-Clear-redirect.png') no-repeat  center 10px;}
+a.lnkBannedIPs { background: url('Crystal-Clear_banned_ip.png') no-repeat  center 10px;}
+a.lnkFeatureAdmin { background: url('Crystal-Clear-app-kpackage.png') no-repeat  center 10px;}
+a.lnkTaskQueue { background: url('Crystal_Clear_action_editpaste.png') no-repeat  center 10px;}
+a.lnkWebPartAdmin { background: url('Crystal_Clear_Networksettings.png') no-repeat  center 10px;}
+a.lnkAwaitingApproval { background: url('Crystal_Clear_waiting_approval.png') no-repeat  center 10px;}
+a.lnkRejectedContent { background: url('Crystal_Clear_rejected_content.png') no-repeat  center 10px;}
+a.lnkPendingPages { background: url('FileCrystal-Clear-draft_pages.png') no-repeat  center 10px;}
+a.AnalyticsMenuLink { background: url('Crystal-Clear-app-browser.png') no-repeat  center 10px; }
+a.lnkDevTools  { background: url('devtools.png') no-repeat  center 10px; }
+a.lnkDesignTools  { background: url('designtools.png') no-repeat  center 10px; }
+a.lnkRegistrationAgreement, a.lnkLoginInfo  { background: url('RegAgreement.png') no-repeat  center 10px; }
+a.lnkPermissionAdmin { background: url('permissions.png') no-repeat  center 10px; }
+a.lnkSkinList { background: url('skin.png') no-repeat center 10px; }
+a.lnkCacheTool { background: url('cache.png') no-repeat center 10px; }
+*/
+

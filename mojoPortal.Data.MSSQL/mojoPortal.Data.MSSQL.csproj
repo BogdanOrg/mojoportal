@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6DDFE292-37AA-4A02-B2F0-BA7968A026EF}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>mojoPortal.Data</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>mojoPortal.Data</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\</OutputPath>
+    <BaseAddress>285212672</BaseAddress>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;MONO</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <FileAlignment>4096</FileAlignment>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConnectionString.cs" />
+    <Compile Include="SqlDataRecordList.cs" />
+    <Compile Include="DBCategoryItem.cs" />
+    <Compile Include="DBPaymentLog.cs" />
+    <Compile Include="DBSystemLog.cs" />
+    <Compile Include="DBTag.cs" />
+    <Compile Include="DBTagItem.cs" />
+    <Compile Include="DBTagVocabulary.cs" />
+    <Compile Include="DBUserClaims.cs" />
+    <Compile Include="DBUserLogins.cs" />
+    <Compile Include="SqlParameterCache.cs" />
+    <Compile Include="DBAuthorizeNetLog.cs" />
+    <Compile Include="dbBannedIP.cs" />
+    <Compile Include="DBCategory.cs" />
+    <Compile Include="DBComment.cs" />
+    <Compile Include="DBCommerceReport.cs" />
+    <Compile Include="DBContentHistory.cs" />
+    <Compile Include="DBContentMeta.cs" />
+    <Compile Include="DBContentMetaLink.cs" />
+    <Compile Include="DBContentRating.cs" />
+    <Compile Include="DBContentStyle.cs" />
+    <Compile Include="DBContentTemplate.cs" />
+    <Compile Include="DBContentWorkflow.cs" />
+    <Compile Include="DBCurrency.cs" />
+    <Compile Include="DBEmailSendLog.cs" />
+    <Compile Include="DBEmailSendQueue.cs" />
+    <Compile Include="DBEmailTemplate.cs" />
+    <Compile Include="DBFileAttachment.cs" />
+    <Compile Include="dbFriendlyUrl.cs" />
+    <Compile Include="DBGeoCountry.cs" />
+    <Compile Include="DBGeoZone.cs" />
+    <Compile Include="DBGoogleCheckoutLog.cs" />
+    <Compile Include="dbHtmlContent.cs" />
+    <Compile Include="DBIndexingQueue.cs" />
+    <Compile Include="DBLanguage.cs" />
+    <Compile Include="DBLetter.cs" />
+    <Compile Include="DBLetterHtmlTemplate.cs" />
+    <Compile Include="DBLetterInfo.cs" />
+    <Compile Include="DBLetterSendLog.cs" />
+    <Compile Include="DBLetterSubscription.cs" />
+    <Compile Include="dbModule.cs" />
+    <Compile Include="dbModuleDefinition.cs" />
+    <Compile Include="dbModuleSettings.cs" />
+    <Compile Include="dbPageSettings.cs" />
+    <Compile Include="DBPayPalLog.cs" />
+    <Compile Include="DBPlugNPayLog.cs" />
+    <Compile Include="dbPortal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DBRedirectList.cs" />
+    <Compile Include="dbRoles.cs" />
+    <Compile Include="DBSavedQuery.cs" />
+    <Compile Include="dbSiteFolder.cs" />
+    <Compile Include="dbSitePersonalization.cs" />
+    <Compile Include="dbSiteSettings.cs" />
+    <Compile Include="DBSiteSettingsEx.cs" />
+    <Compile Include="dbSiteUser.cs" />
+    <Compile Include="DBTaskQueue.cs" />
+    <Compile Include="DBTaxClass.cs" />
+    <Compile Include="DBTaxRate.cs" />
+    <Compile Include="DBUserLocation.cs" />
+    <Compile Include="dbUserPage.cs" />
+    <Compile Include="dbWebPartContent.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="SQLParameterHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net">
+      <Version>2.0.15</Version>
+    </PackageReference>
+  </ItemGroup>
+
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- <Target Name="SpicNSpan" BeforeTargets="_GetAllRestoreProjectPathItems">
+    <RemoveDir Directories="$(TargetDir)" />
+    <RemoveDir Directories="$(ProjectDir)$(BaseIntermediateOutputPath)" />
+  </Target> -->
+</Project>

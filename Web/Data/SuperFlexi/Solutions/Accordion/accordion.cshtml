@@ -1,0 +1,44 @@
+@model SuperFlexiUI.Models.WidgetModel
+
+@using mojoPortal.Business.WebHelpers;
+@using mojoPortal.Business;
+@using Resources;
+<div class="accordion" id="module@(Model.Module.Id)" data-contentsection="@Model.Config.ModuleFriendlyName">
+	@Html.Partial("_ModuleTitle")
+
+	@if (Model.Config.UseHeader && !string.IsNullOrWhiteSpace(Model.Config.HeaderContent))
+	{
+	<div class="accordion__header">@Html.Raw(@Model.Config.HeaderContent)</div>
+	}
+
+	<div class="accordion__items panel-group" id="accordion-@(Model.Module.Id)" role="tablist" aria-multiselectable="true">
+		@foreach (dynamic item in Model.Items)
+		{
+		<div class="accordion__item panel panel-@(item.important ? " danger" : item.color)">
+			<div class="accordion__item-heading panel-heading" role="tab" id="heading-@item.Id">
+				<h4 class="accordion__item-title panel-title">
+					<a role="button" data-toggle="collapse" data-parent="#accordion-@Model.Module.Id" href="#collapse-@item.Id" aria-expanded="true" aria-controls="collapse-@item.Id">@item.title[0]</a>
+					@if (item.IsEditable)
+					{
+					<a class="ModuleEditLink flexi-item-edit" href="@item.EditUrl"><span class="fa fa-edit"></span> @SuperFlexiResources.EditLink</a>
+					}
+				</h4>
+			</div>
+			<div id="collapse-@item.Id" class="accordion__item-panel panel-collapse collapse" role="tabpanel" aria-labelledby="heading-@item.Id">
+				<div class="panel-body accordion__item-panel-body">@Html.Raw(item.content)</div>
+			</div>
+		</div>
+		}
+	</div>
+	@if (Model.Config.UseFooter && !string.IsNullOrWhiteSpace(Model.Config.FooterContent))
+	{
+	<div class="accordion__footer">@Html.Raw(@Model.Config.HeaderContent)</div>
+	}
+
+	@* Pagination *@
+	@Html.Partial("_SuperFlexiPaging", Model)
+
+	<script>$(document).ready(function () { $('.accordion__items').each(function () { $(this).find('[data-toggle="collapse"]').eq(0).click() }) });</script>
+</div>
+
+@Html.Partial("_DebugInfo")
